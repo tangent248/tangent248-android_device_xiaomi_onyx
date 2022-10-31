@@ -166,6 +166,11 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # ART
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
+# Enable whole-program R8 Java optimizations for SystemUI and system_server,
+# but also allow explicit overriding for testing and development.
+SYSTEM_OPTIMIZE_JAVA := true
+SYSTEMUI_OPTIMIZE_JAVA := true
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
