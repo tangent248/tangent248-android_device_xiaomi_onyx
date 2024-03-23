@@ -161,6 +161,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+# Debloat
+PRODUCT_PACKAGES += \
+    RemovePackagesPeridot
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
