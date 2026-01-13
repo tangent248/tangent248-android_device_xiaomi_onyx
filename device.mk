@@ -149,6 +149,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.demura-service \
     vendor.qti.hardware.display.snapalloc-impl
 
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer3-V3-ndk.vendor \
     vendor.qti.hardware.display.aiqe-V2-ndk.vendor  \
