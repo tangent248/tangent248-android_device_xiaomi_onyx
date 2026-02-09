@@ -802,6 +802,8 @@
 
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
+    <integer name="config_shift_interval">60</integer>
+
     <!-- Specifies the maximum burn-in offset displacement from the center. If -1, no maximum value will be used. -->
 
     <integer name="config_burnInProtectionMaxRadius">70</integer>
