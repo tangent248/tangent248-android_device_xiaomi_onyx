@@ -40,4 +40,6 @@ AXION_CAMERA_FRONT_INFO := 20
 TARGET_ENABLE_BLUR := true
 TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
 # Features & Performance
+BYPASS_CHARGE_SUPPORTED := true
+BYPASS_CHARGE_TOGGLE_PATH ?= /sys/class/xm_power/charger/smart_charge/smart_night
 TARGET_INCLUDE_AXFX := true
