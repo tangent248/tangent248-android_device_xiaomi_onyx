@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <resource id="0x000e" name="pmqos_cpu_dma_latency" path="/dev/cpu_dma_latency" default="1000000" />
+    <resource id="0x0010" name="uclamp_fg_lat" path="/dev/cpuctl/foreground/cpu.uclamp.latency_sensitive" default="0" />
+    <resource id="0x0011" name="uclamp_fg_max" path="/dev/cpuctl/foreground/cpu.uclamp.max" default="100" />
+    <resource id="0x0012" name="uclamp_fg_min" path="/dev/cpuctl/foreground/cpu.uclamp.min" default="0" />
+    <resource id="0x0013" name="uclamp_top_lat" path="/dev/cpuctl/top-app/cpu.uclamp.latency_sensitive" default="0" />
+    <resource id="0x0014" name="uclamp_top_max" path="/dev/cpuctl/top-app/cpu.uclamp.max" default="max" />
+    <resource id="0x0015" name="uclamp_top_min" path="/dev/cpuctl/top-app/cpu.uclamp.min" default="0" />
+
+    <resource id="0x0099" name="cpuset_h_bg_cpus" path="/dev/cpuset/background/cpus" default="0-2" /> 
+    <resource id="0x009a" name="cpuset_ax_fg_cpus" path="/dev/cpuset/foreground/cpus" default="0-6" /> 
+    <resource id="0x009b" name="cpuset_dex2oat_cpus" path="/dev/cpuset/system-background/cpus" default="0-2" /> 
+
+    <resource id="0x0100" name="cpu_little_max" path="/sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq" default="2016000" />
+    <resource id="0x0101" name="cpu_big_max" path="/sys/devices/system/cpu/cpufreq/policy2/scaling_max_freq" default="3014400" />
+    <resource id="0x0102" name="cpu_bigplus_max" path="/sys/devices/system/cpu/cpufreq/policy5/scaling_max_freq" default="2803200" />
+    <resource id="0x0103" name="cpu_prime_max" path="/sys/devices/system/cpu/cpufreq/policy7/scaling_max_freq" default="2956800" />
+
+    <resource id="0x0110" name="cpu_little_min" path="/sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq" default="364800" />
+    <resource id="0x0111" name="cpu_big_min" path="/sys/devices/system/cpu/cpufreq/policy2/scaling_min_freq" default="480000" />
+    <resource id="0x0112" name="cpu_bigplus_min" path="/sys/devices/system/cpu/cpufreq/policy5/scaling_min_freq" default="480000" />
+    <resource id="0x0113" name="cpu_prime_min" path="/sys/devices/system/cpu/cpufreq/policy7/scaling_min_freq" default="480000" />
+    
+    <resource id="0x0300" name="gpu_max_freq" path="/sys/class/kgsl/kgsl-3d0/devfreq/max_freq" default="937000000" />
+    <resource id="0x0301" name="gpu_min_freq" path="/sys/class/kgsl/kgsl-3d0/devfreq/min_freq" default="264000000" />
+    <resource id="0x0302" name="gpu_force_rail" path="/sys/class/kgsl/kgsl-3d0/force_rail_on" default="0" />
+    <resource id="0x0303" name="gpu_force_clk" path="/sys/class/kgsl/kgsl-3d0/force_clk_on" default="0" />
+    <resource id="0x0304" name="gpu_idle_timer" path="/sys/class/kgsl/kgsl-3d0/idle_timer" default="120" />
+    
+    <resource id="0x0400" name="cpubw_hyst_trigger" path="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hyst_trigger_count" default="3" />
+    <resource id="0x0401" name="cpubw_hist_memory" path="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hist_memory" default="20" />
+    <resource id="0x0402" name="cpubw_hyst_length" path="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hyst_length" default="10" />
+    <resource id="0x0403" name="cpubw_min_freq" path="/sys/devices/system/cpu/bus_dcvs/DDR/boost_freq" default="547000" />
+    
+    <resource id="0x0410" name="llccbw_hyst_trigger" path="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/hyst_trigger_count" default="3" />
+    <resource id="0x0411" name="llccbw_hist_memory" path="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/hist_memory" default="20" />
+    <resource id="0x0412" name="llccbw_hyst_length" path="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/hyst_length" default="10" />
+    <resource id="0x0413" name="llccbw_min_freq" path="/sys/devices/system/cpu/bus_dcvs/LLCC/boost_freq" default="300000" />
+    <resource id="0x0420" name="l3_min_freq" path="/sys/devices/system/cpu/bus_dcvs/L3/boost_freq" default="364800" />
+    <resource id="0x0502" name="thermal_profile_sconfig" path="/sys/devices/virtual/thermal/thermal_message/sconfig" default="0" />
+        
+</resources>

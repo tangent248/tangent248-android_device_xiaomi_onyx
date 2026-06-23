@@ -30,7 +30,14 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/axion/ax_perf_boosts.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ax_perf_boosts.xml \
+    $(LOCAL_PATH)/configs/axion/ax_perf_resources.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ax_perf_resources.xml \
+    $(LOCAL_PATH)/configs/axion/ax_perf_thermal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ax_perf_thermal.xml \
+    $(LOCAL_PATH)/configs/axion/ax_perf_threads.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ax_perf_threads.xml
+
 # Axion Device Configuration
+TARGET_DISABLES_LIBPERF := true
 AXION_MAINTAINER := tangent248
 AXION_PROCESSOR := SM8735
 # Camera Info
