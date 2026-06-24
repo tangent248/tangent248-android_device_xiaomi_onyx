@@ -1,3 +1,6 @@
 binder_call(system_server, hal_touchfeature_xiaomi_default)
 
 allow system_server hal_touchfeature_xiaomi_default:process signal;
+
+allow system_server proc_walt:dir search;
+allow system_server vendor_sysfs_msm_perf:file read;
