@@ -13,15 +13,41 @@
   </boost-resource>
 
   <boost-resource id="0x01fd" name="latency_boost">
-    <set resource="uclamp_fg_min" id="0x0012" value="60" />
-    <set resource="uclamp_top_min" id="0x0015" value="90" />
+    <set resource="uclamp_fg_min" id="0x0012" value="40" />
+    <set resource="uclamp_top_min" id="0x0015" value="60" />
     <set resource="uclamp_top_lat" id="0x0013" value="1" />
     <set resource="uclamp_fg_max" id="0x0011" value="100" />
     <set resource="pmqos_cpu_dma_latency" id="0x000e" value="44" />
+    <set resource="sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveHighFreq" id="0x1000" value="1785600" />
+    <set resource="sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveLowFreq" id="0x1001" value="1516800" />
+    <set resource="sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveLevel1" id="0x1002" value="748800" />
+    <set resource="procSysWaltSchedBoost" id="0x1003" value="2" />
+    <set resource="sysDevicesSystemCpuCpu0CoreCtlMinCpus" id="0x1004" value="3" />
+    <set resource="procSysWaltSchedBusyHysteresisEnableCpus" id="0x1005" value="252" />
+    <set resource="procSysWaltSchedBusyHystNs" id="0x1006" value="39" />
+    <set resource="sysDevicesSystemCpuCpu0CoreCtlEnable" id="0x1007" value="0" />
+    <set resource="sysDevicesSystemCpuCpu5CoreCtlEnable" id="0x1008" value="0" />
+  </boost-resource>
+
+  <boost-resource id="0x01ff" name="launch_boost">
+    <set resource="uclamp_fg_min" id="0x0012" value="40"/>
+    <set resource="uclamp_top_min" id="0x0015" value="60"/>
+    <set resource="uclamp_top_lat" id="0x0013" value="1"/>
+    <set resource="procSysWaltSchedBoost" id="0x1003" value="1" />
+    <set resource="sysKernelMsmPerformanceParametersCpuMaxFreq" id="0x100a" value="0:2016000 1:2016000 2:3014400 3:3014400 4:3014400 5:2803200 6:2803200" />
+    <set resource="sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveHighFreq" id="0x1000" value="1632000" />
+    <set resource="sysDevicesSystemCpuCpufreqPolicy2WaltAdaptiveHighFreq" id="0x100b" value="1632000" />
+    <set resource="sysDevicesSystemCpuCpufreqPolicy5WaltAdaptiveHighFreq" id="0x100c" value="1728000" />
+    <set resource="sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveLowFreq" id="0x1001" value="1401600" />
+    <set resource="sysDevicesSystemCpuCpufreqPolicy2WaltAdaptiveLowFreq" id="0x100d" value="1286400" />
+    <set resource="sysDevicesSystemCpuCpufreqPolicy5WaltAdaptiveLowFreq" id="0x100e" value="1516800" />
+    <set resource="sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveLevel1" id="0x1002" value="1190400" />
+    <set resource="sysDevicesSystemCpuCpufreqPolicy2WaltAdaptiveLevel1" id="0x100f" value="1056000" />
+    <set resource="sysDevicesSystemCpuCpufreqPolicy5WaltAdaptiveLevel1" id="0x1010" value="1190400" />
   </boost-resource>
 
   <boost opcode="1" timeout_ms="2500" name="first_launch">
-    <set resource="latency_boost" id="0x01fd" />
+    <set resource="launch_boost" id="0x01ff" />
   </boost>
 
   <boost opcode="2" timeout_ms="500" name="warm_launch">
@@ -47,8 +73,6 @@
 
   <boost opcode="11" timeout_ms="500" name="fling">
     <set resource="scroll_common_boost" id="0x01fb" />
-    <set resource="uclamp_fg_min" id="0x0012" value="50" />
-    <set resource="uclamp_top_min" id="0x0015" value="60" />
   </boost>
 
   <boost opcode="12" timeout_ms="300" name="scroll_input">
@@ -198,7 +222,7 @@
   </boost>
 
   <boost opcode="47" timeout_ms="0" name="game">
-    <set resource="uclamp_top_min" id="0x0015" value="60" />
+    <set resource="uclamp_top_min" id="0x0015" value="40" />
     <set resource="uclamp_top_lat" id="0x0013" value="1" />
   </boost>
 

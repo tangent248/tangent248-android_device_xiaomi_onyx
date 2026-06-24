@@ -31,16 +31,44 @@
     <resource id="0x0303" name="gpu_force_clk" path="/sys/class/kgsl/kgsl-3d0/force_clk_on" default="0" />
     <resource id="0x0304" name="gpu_idle_timer" path="/sys/class/kgsl/kgsl-3d0/idle_timer" default="120" />
     
-    <resource id="0x0400" name="cpubw_hyst_trigger" path="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hyst_trigger_count" default="3" />
-    <resource id="0x0401" name="cpubw_hist_memory" path="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hist_memory" default="20" />
-    <resource id="0x0402" name="cpubw_hyst_length" path="/sys/devices/system/cpu/bus_dcvs/DDR/24091000.qcom,bwmon-ddr/hyst_length" default="10" />
-    <resource id="0x0403" name="cpubw_min_freq" path="/sys/devices/system/cpu/bus_dcvs/DDR/boost_freq" default="547000" />
-    
-    <resource id="0x0410" name="llccbw_hyst_trigger" path="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/hyst_trigger_count" default="3" />
-    <resource id="0x0411" name="llccbw_hist_memory" path="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/hist_memory" default="20" />
-    <resource id="0x0412" name="llccbw_hyst_length" path="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/hyst_length" default="10" />
-    <resource id="0x0413" name="llccbw_min_freq" path="/sys/devices/system/cpu/bus_dcvs/LLCC/boost_freq" default="300000" />
-    <resource id="0x0420" name="l3_min_freq" path="/sys/devices/system/cpu/bus_dcvs/L3/boost_freq" default="364800" />
+    <resource id="0x1000" name="sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveHighFreq" path="/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_high_freq" default="0" />
+    <resource id="0x1001" name="sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveLowFreq" path="/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_low_freq" default="0" />
+    <resource id="0x1002" name="sysDevicesSystemCpuCpufreqPolicy0WaltAdaptiveLevel1" path="/sys/devices/system/cpu/cpufreq/policy0/walt/adaptive_level_1" default="0" />
+    <resource id="0x1003" name="procSysWaltSchedBoost" path="/proc/sys/walt/sched_boost" default="0" />
+    <resource id="0x1004" name="sysDevicesSystemCpuCpu0CoreCtlMinCpus" path="/sys/devices/system/cpu/cpu0/core_ctl/min_cpus" default="1" />
+    <resource id="0x1005" name="procSysWaltSchedBusyHysteresisEnableCpus" path="/proc/sys/walt/sched_busy_hysteresis_enable_cpus" default="0" />
+    <resource id="0x1006" name="procSysWaltSchedBusyHystNs" path="/proc/sys/walt/sched_busy_hyst_ns" default="0" />
+    <resource id="0x1007" name="sysDevicesSystemCpuCpu0CoreCtlEnable" path="/sys/devices/system/cpu/cpu0/core_ctl/enable" default="0" />
+    <resource id="0x1008" name="sysDevicesSystemCpuCpu5CoreCtlEnable" path="/sys/devices/system/cpu/cpu5/core_ctl/enable" default="1" />
+    <resource id="0x1009" name="sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccMaxFreq" path="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/max_freq" default="1211200" />
+    <resource id="0x100a" name="sysKernelMsmPerformanceParametersCpuMaxFreq" path="/sys/kernel/msm_performance/parameters/cpu_max_freq" default="0:9999999 1:9999999 2:9999999 3:9999999 4:9999999 5:9999999 6:9999999 7:9999999" />
+    <resource id="0x100b" name="sysDevicesSystemCpuCpufreqPolicy2WaltAdaptiveHighFreq" path="/sys/devices/system/cpu/cpufreq/policy2/walt/adaptive_high_freq" default="0" />
+    <resource id="0x100c" name="sysDevicesSystemCpuCpufreqPolicy5WaltAdaptiveHighFreq" path="/sys/devices/system/cpu/cpufreq/policy5/walt/adaptive_high_freq" default="0" />
+    <resource id="0x100d" name="sysDevicesSystemCpuCpufreqPolicy2WaltAdaptiveLowFreq" path="/sys/devices/system/cpu/cpufreq/policy2/walt/adaptive_low_freq" default="0" />
+    <resource id="0x100e" name="sysDevicesSystemCpuCpufreqPolicy5WaltAdaptiveLowFreq" path="/sys/devices/system/cpu/cpufreq/policy5/walt/adaptive_low_freq" default="0" />
+    <resource id="0x100f" name="sysDevicesSystemCpuCpufreqPolicy2WaltAdaptiveLevel1" path="/sys/devices/system/cpu/cpufreq/policy2/walt/adaptive_level_1" default="0" />
+    <resource id="0x1010" name="sysDevicesSystemCpuCpufreqPolicy5WaltAdaptiveLevel1" path="/sys/devices/system/cpu/cpufreq/policy5/walt/adaptive_level_1" default="0" />
+    <resource id="0x1011" name="sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccSampleMs" path="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/sample_ms" default="4" />
+    <resource id="0x1012" name="sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccIoPercent" path="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/io_percent" default="80" />
+    <resource id="0x1013" name="sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccHystLength" path="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/hyst_length" default="0" />
+    <resource id="0x1014" name="sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccHistMemory" path="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/hist_memory" default="20" />
+    <resource id="0x1015" name="sysDevicesSystemCpuBusDcvsLlcc240b7400QcomBwmonLlccHystTriggerCount" path="/sys/devices/system/cpu/bus_dcvs/LLCC/240b7400.qcom,bwmon-llcc/hyst_trigger_count" default="3" />
+    <resource id="0x1016" name="sysDevicesSystemCpuCpu2CpufreqWaltPl" path="/sys/devices/system/cpu/cpu2/cpufreq/walt/pl" default="0" />
+    <resource id="0x1017" name="sysDevicesSystemCpuCpu0CpufreqWaltPl" path="/sys/devices/system/cpu/cpu0/cpufreq/walt/pl" default="0" />
+    <resource id="0x1018" name="sysDevicesSystemCpuCpu0CpufreqWaltHispeedLoad" path="/sys/devices/system/cpu/cpu0/cpufreq/walt/hispeed_load" default="90" />
+    <resource id="0x1019" name="procSysWaltSchedUpmigrate" path="/proc/sys/walt/sched_upmigrate" default="95 95 95" />
+    <resource id="0x101a" name="procSysWaltSchedDownmigrate" path="/proc/sys/walt/sched_downmigrate" default="85 85 85" />
+    <resource id="0x101b" name="procSysWaltSchedIdleEnough" path="/proc/sys/walt/sched_idle_enough" default="30" />
+    <resource id="0x101c" name="sysDevicesSystemCpuCpu2CpufreqWaltHispeedFreq" path="/sys/devices/system/cpu/cpu2/cpufreq/walt/hispeed_freq" default="1190400" />
+    <resource id="0x101d" name="sysDevicesSystemCpuCpu0CoreCtlMinPartialCpus" path="/sys/devices/system/cpu/cpu0/core_ctl/min_partial_cpus" default="0" />
+    <resource id="0x101e" name="sysDevicesSystemCpuCpu0CoreCtlOfflineDelayMs" path="/sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms" default="100" />
+    <resource id="0x101f" name="sysDevicesSystemCpuCpu2CpufreqWaltRtgBoostFreq" path="/sys/devices/system/cpu/cpu2/cpufreq/walt/rtg_boost_freq" default="787200" />
+    <resource id="0x1020" name="sysDevicesSystemCpuCpu0CpufreqWaltRtgBoostFreq" path="/sys/devices/system/cpu/cpu0/cpufreq/walt/rtg_boost_freq" default="614400" />
+    <resource id="0x1021" name="sysDevicesSystemCpuCpu7CpufreqWaltRtgBoostFreq" path="/sys/devices/system/cpu/cpu7/cpufreq/walt/rtg_boost_freq" default="0" />
+    <resource id="0x1022" name="sysDevicesSystemCpuCpu2CoreCtlEnable" path="/sys/devices/system/cpu/cpu2/core_ctl/enable" default="0" />
+    <resource id="0x1023" name="devCpuDmaLatency" path="/dev/cpu_dma_latency" default="2000000000" />
+    <resource id="0x1024" name="sysKernelMsmPerformanceParametersCpuMinFreq" path="/sys/kernel/msm_performance/parameters/cpu_min_freq" default="0:0 1:0 2:0 3:0 4:0 5:0 6:0 7:0" />
+
     <resource id="0x0502" name="thermal_profile_sconfig" path="/sys/devices/virtual/thermal/thermal_message/sconfig" default="0" />
         
 </resources>
