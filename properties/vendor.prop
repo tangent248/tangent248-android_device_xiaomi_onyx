@@ -144,6 +144,7 @@ vendor.display.vds_allow_hwc=1
 vendor.gralloc.disable_ubwc=0
 vendor.gralloc.enable_logs=0
 vendor.gralloc.enable_snapalloc=1
+debug.cpurend.vsync=false
 
 # Incremental FS
 ro.incremental.enable=yes
