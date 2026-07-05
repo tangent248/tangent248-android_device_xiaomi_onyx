@@ -196,6 +196,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
+# Dynamic IRQ Tuning
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/bin/init.onyx.irqtuning.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.onyx.irqtuning.sh
+
 # Hypsy
 PRODUCT_PACKAGES += \
     xiaomi.system.hypsys.common-service-dummy

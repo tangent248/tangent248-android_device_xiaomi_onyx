@@ -117,6 +117,7 @@ on late-fs
     mount_all /vendor/etc/fstab.qcom --late
 
 on post-fs-data
+    mkdir /data/vendor/irqbalance 0770 system system
     chmod 0666 /dev/migt
     restorecon /dev/migt
     chmod 0777 /sys/module/migt/parameters/migt_freq
@@ -532,6 +533,18 @@ on boot
 on property:dev.bootcomplete=1
     chown system system /sys/class/xm_power/charger/smart_charge/smart_night
     chmod 0660 /sys/class/xm_power/charger/smart_charge/smart_night
+
+service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /data/vendor/irqbalance/msm_irqbalance.conf
+    class core
+    user root
+    group root
+    disabled
+    override
+
+on property:sys.boot_completed=1
+    stop vendor.msm_irqbalance
+    exec u:r:vendor_qti_init_shell:s0 root root -- /vendor/bin/init.onyx.irqtuning.sh
+    start vendor.msm_irqbalance
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
