@@ -147,6 +147,35 @@ vendor.gralloc.enable_logs=0
 vendor.gralloc.enable_snapalloc=1
 debug.cpurend.vsync=false
 
+#AxVsync
+persist.sys.sf.dynamic_duration.switch=1
+persist.sys.sf.dynamic_duration.sf.late=14600000
+persist.sys.sf.dynamic_duration.app.late=18000000
+persist.sys.sf.dynamic_duration.sf.early=14600000
+persist.sys.sf.dynamic_duration.app.early=18000000
+persist.sys.sf.dynamic_duration.sf.earlyGl=14600000
+persist.sys.sf.dynamic_duration.app.earlyGl=18000000
+persist.sys.sf.dynamic_duration.sf.decouple=27600000
+persist.sys.sf.dynamic_duration.app.decouple=20000000
+persist.sys.sf.dynamic_duration.sf.late.60=15600000
+persist.sys.sf.dynamic_duration.app.late.60=16600000
+persist.sys.sf.dynamic_duration.sf.early.60=15600000
+persist.sys.sf.dynamic_duration.app.early.60=16600000
+persist.sys.sf.dynamic_duration.sf.earlyGl.60=15600000
+persist.sys.sf.dynamic_duration.app.earlyGl.60=16600000
+persist.sys.sf.dynamic_duration.sf.late.90=16100000
+persist.sys.sf.dynamic_duration.app.late.90=16600000
+persist.sys.sf.dynamic_duration.sf.early.90=16100000
+persist.sys.sf.dynamic_duration.app.early.90=16600000
+persist.sys.sf.dynamic_duration.sf.earlyGl.90=16100000
+persist.sys.sf.dynamic_duration.app.earlyGl.90=16600000
+persist.sys.sf.dynamic_duration.sf.late.120=12300000
+persist.sys.sf.dynamic_duration.app.late.120=11600000
+persist.sys.sf.dynamic_duration.sf.early.120=12300000
+persist.sys.sf.dynamic_duration.app.early.120=11600000
+persist.sys.sf.dynamic_duration.sf.earlyGl.120=12300000
+persist.sys.sf.dynamic_duration.app.earlyGl.120=11600000
+
 # Incremental FS
 ro.incremental.enable=yes
 
