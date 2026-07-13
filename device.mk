@@ -150,7 +150,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.snapalloc-impl
 
 $(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
-
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer3-V3-ndk.vendor \
     vendor.qti.hardware.display.aiqe-V2-ndk.vendor  \
