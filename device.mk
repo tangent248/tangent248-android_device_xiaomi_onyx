@@ -169,6 +169,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# ART
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
