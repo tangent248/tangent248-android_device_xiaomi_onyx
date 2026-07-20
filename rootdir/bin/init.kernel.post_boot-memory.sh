@@ -41,7 +41,7 @@ function configure_zram_parameters() {
 
 	# use MB avoid 32 bit overflow
 	if [ $zRamSizeMB -gt 6144 ]; then
-		let zRamSizeMB=6144
+		let zRamSizeMB=3072
 	fi
 
 	echo lz4 > /sys/block/zram0/comp_algorithm
