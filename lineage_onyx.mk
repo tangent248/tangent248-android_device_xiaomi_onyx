@@ -22,6 +22,8 @@ PRODUCT_MODEL := 25053PC47G
 PRODUCT_SYSTEM_NAME := onyx_global
 PRODUCT_SYSTEM_DEVICE := onyx
 
+LUMINE_MAINTAINER := tangent248
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="onyx_global-user 15 AQ3A.250226.002 OS3.0.7.0.WOLMIXM release-keys" \
     BuildFingerprint=POCO/onyx_global/onyx:15/AQ3A.250226.002/OS3.0.7.0.WOLMIXM:user/release-keys \
