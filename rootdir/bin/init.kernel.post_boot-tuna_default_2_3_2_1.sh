@@ -208,6 +208,46 @@ echo 0-6 > /dev/cpuset/foreground/cpus
 echo 0-1 > /dev/cpuset/restricted/cpus
 echo 0-4 > /dev/cpuset/audio-app/cpus
 
+#baseline uclamp
+echo max > /dev/cpuctl/top-app/cpu.uclamp.max
+echo 0 > /dev/cpuctl/top-app/cpu.uclamp.min
+
+echo max > /dev/cpuctl/systemui/cpu.uclamp.max
+echo 0 > /dev/cpuctl/systemui/cpu.uclamp.min
+
+echo max > /dev/cpuctl/foreground_window/cpu.uclamp.max
+echo 0 > /dev/cpuctl/foreground_window/cpu.uclamp.min
+
+echo max > /dev/cpuctl/system/cpu.uclamp.max
+echo 0 > /dev/cpuctl/system/cpu.uclamp.min
+
+echo max > /dev/cpuctl/foreground/cpu.uclamp.max
+echo 0 > /dev/cpuctl/foreground/cpu.uclamp.min
+
+echo max > /dev/cpuctl/camera-daemon/cpu.uclamp.max
+echo 0 > /dev/cpuctl/camera-daemon/cpu.uclamp.min
+
+echo max > /dev/cpuctl/nnapi-hal/cpu.uclamp.max
+echo 0 > /dev/cpuctl/nnapi-hal/cpu.uclamp.min
+
+echo 60 > /dev/cpuctl/audio-app/cpu.uclamp.max
+echo 0 > /dev/cpuctl/audio-app/cpu.uclamp.min
+
+echo max > /dev/cpuctl/rt/cpu.uclamp.max
+echo 0 > /dev/cpuctl/rt/cpu.uclamp.min
+
+echo 35 > /dev/cpuctl/background/cpu.uclamp.max
+echo 0 > /dev/cpuctl/background/cpu.uclamp.min
+
+echo 25 > /dev/cpuctl/restricted/cpu.uclamp.max
+echo 0 > /dev/cpuctl/restricted/cpu.uclamp.min
+
+echo 40 > /dev/cpuctl/system-background/cpu.uclamp.max
+echo 0 > /dev/cpuctl/system-background/cpu.uclamp.min
+
+echo 50 > /dev/cpuctl/dex2oat/cpu.uclamp.max
+echo 0 > /dev/cpuctl/dex2oat/cpu.uclamp.min
+
 # configure bus-dcvs
 bus_dcvs="/sys/devices/system/cpu/bus_dcvs"
 
