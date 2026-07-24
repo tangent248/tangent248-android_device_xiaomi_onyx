@@ -372,6 +372,10 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     libqti-perfd-client
 
+# Dynamic IRQ Tuning
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/bin/init.onyx.irqtuning.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.onyx.irqtuning.sh
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 

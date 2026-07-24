@@ -5,3 +5,5 @@ allow vendor_qti_init_shell vendor_firmware_data_file:dir rw_dir_perms;
 allow vendor_qti_init_shell vendor_firmware_data_file:file rw_file_perms;
 allow vendor_qti_init_shell vendor_data_file:file { read open getattr };
 allow vendor_qti_init_shell vendor_data_file:dir { read open getattr };
+allow vendor_qti_init_shell proc_interrupts:file r_file_perms;
+allow vendor_qti_init_shell vendor_toolbox_exec:file { rx_file_perms execute_no_trans };

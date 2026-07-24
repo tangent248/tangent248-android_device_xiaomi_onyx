@@ -146,3 +146,8 @@
 /data/vendor/mac_addr(/.*)? u:object_r:vendor_mac_vendor_data_file:s0
 /data/vendor/mbnconfig(/.*)? u:object_r:vendor_firmware_data_file:s0
 /vendor/bin/nv_mac u:object_r:vendor_wcnss_service_exec:s0
+
+#IRQTuning
+/vendor/bin/init\.onyx\.irqtuning\.sh    u:object_r:vendor_qti_init_shell_exec:s0
+/vendor/bin/awk      u:object_r:vendor_toolbox_exec:s0
+/vendor/bin/grep     u:object_r:vendor_toolbox_exec:s0

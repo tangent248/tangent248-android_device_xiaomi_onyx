@@ -738,6 +738,9 @@ service ufs_ffu_service /vendor/bin/sh /vendor/bin/ufs_ffu.sh
     oneshot
 
 on property:sys.boot_completed=1
+    exec u:r:vendor_qti_init_shell:s0 root root -- /vendor/bin/init.onyx.irqtuning.sh
+
+on property:sys.boot_completed=1
     start ufs_ffu_service
 
     # Set thermal mode to mgame
