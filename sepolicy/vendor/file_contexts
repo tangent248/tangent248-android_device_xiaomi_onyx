@@ -151,3 +151,4 @@
 /vendor/bin/init\.onyx\.irqtuning\.sh    u:object_r:vendor_qti_init_shell_exec:s0
 /vendor/bin/awk      u:object_r:vendor_toolbox_exec:s0
 /vendor/bin/grep     u:object_r:vendor_toolbox_exec:s0
+/vendor/bin/tr       u:object_r:vendor_toolbox_exec:s0
