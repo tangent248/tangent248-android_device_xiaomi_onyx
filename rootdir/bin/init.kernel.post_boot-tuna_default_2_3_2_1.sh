@@ -149,8 +149,8 @@ if [ -d /proc/sys/walt ]; then
 	echo 0 > /proc/sys/walt/sched_boost
 
 	# configure input boost settings
-	echo 1075200 0 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
-	echo 40 > /proc/sys/walt/input_boost/input_boost_ms
+	echo 0 0 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
+	echo 0 > /proc/sys/walt/input_boost/input_boost_ms
 
     # configure power_key boost settings
 	echo 1785600 0 2611200 0 0 2611200 0 2515200 > /proc/sys/walt/input_boost/powerkey_input_boost_freq
